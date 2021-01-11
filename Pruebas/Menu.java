@@ -3,110 +3,79 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto.poo;
+package menu;
 
-import java.util.Objects;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /**
  *
- * @author spart
+ * @author Giovanny Sanchez Ibarra
  */
 public class Menu {
 
     /**
-     * @param args the command line arguments
+     * @param args el menu de nuestra empresa de discos.
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        KeyboardInput in = new KeyboardInput();
+        Scanner sn = new Scanner(System.in);
         
-        
-        Plist l = new Plist();
-        float precio;
-        int id;
-        String nombre;
-        Pnode t = new Pnode();
-        
-        System.out.println("----------Creando estructura--------------\n");
-        
-        
-        for(int i=0;i<3;i++){
-            System.out.println("Ingresa el nombre del producto: ");
-            nombre=in.readString();
-            System.out.println("Ingresa el precio:");
-            precio=in.readFloat();
-            System.out.println("Ingresa el id del producto:");
-            id=in.readInteger();          
-            Pnode node = new Pnode(null, null, nombre, precio, id);
-                
-            if(l.is_empty(l)){
-                l.setHead(node);
-                l.setTail(node);
-            }
-            else{
-                l.getTail().setNext(node);
-                l.getHead().setPrev(node);
-                node.setPrev(l.getTail());
-                node.setNext(l.getHead());
-                l.setTail(node);
-                    
-            }
+        boolean salir = false;
+        int opcion;
+    
+    // Menu para poder ingresar al sistema.
+     
+        while(!salir){
+            
+            System.out.println("******************************************");
+            System.out.println("1. OPCION 1: Agregar un Producto.");
+            System.out.println("2. OPCION 2: Pedir muestra de un producto.");
+            System.out.println("3. OPCION 3: Buscar algun Articulo.");
+            System.out.println("4. OPCION 4: Ver mi carrito.");
+            System.out.println("5. OPCION 5: Salir del menu.");
+            System.out.println("******************************************");
+    // try- catch.        
+            try{
+    // Se introduce la opcion y se guarda para proceder el switch.
+    
+                System.out.println("Introduce la opcion que requieres. ¡Porfavor!: ");
+                opcion = sn.nextInt();
+
+                switch(opcion){
+                    case 1:
+                        System.out.println(" Esta es la opcion 1: ");
+                        break;
+                    case 2: 
+                        System.out.println(" Esta es la opcion 2: ");
+                        break;
+                    case 3:
+                        System.out.println(" Esta es la opcion 3: ");
+                        break;
+                    case 4:
+                        System.out.println(" Esta es la opcion 4: ");
+                        break;
+                    case 5: 
+                        System.out.println(" Esta es la opcion 5: ¡Vuelva Pronto! ");
+                        salir = true;
+                        break;
+                    default:
+                        System.out.println(" Las opciones son entre 1 y 5 nadamas. ");
+
+                }
+    // Damos una exepcion para prevenir posibles errores.      
+    
+        }catch(InputMismatchException e){
+            
+                System.out.println(" Debes colocar un numero. ");
+                System.out.println(" Intentelo de nuevo porfavor.");
+                sn.next();
         }
-        
-        System.out.println("\n----------Imprimiendo estructura--------------\n");
-        
-        for(t=l.getHead(); t!=l.getTail(); t=t.getNext()){
-            System.out.println("Nombre: "+t.getNombre());
-            System.out.println("Precio: $"+t.getPrecio());
-            System.out.println("ID: "+t.getid());
-        }
-        System.out.println("Nombre: "+t.getNombre());
-        System.out.println("Precio: $"+t.getPrecio());
-        System.out.println("ID: "+t.getid());
-        
-        
-        System.out.println("\n----------Recorriendo estructura--------------\n");
-        
-        t=l.getHead();
-        
-        String opc;
-        System.out.println("S=SIGUIENTE\n P=PREVIO\n Otro=Salir");
-        while(true){
-            
-            
-            System.out.println("Nombre: "+t.getNombre());
-            System.out.println("Precio: $"+t.getPrecio());
-            System.out.println("ID: "+t.getid());
-            
-            System.out.println("");
-            
-            opc = in.readString();
-            switch(opc){
                 
-                case "S":
-                    t=t.getNext();
-                break;
-                
-                case "P":
-                    t=t.getPrev();
-                break;
-                
-                
-                default:
-                    break;
-                        
-                
-            }
-            
-            if(Objects.equals(opc, "S")!=true && Objects.equals("P", opc)!=true){
-                break;
-            }
-        }
-        
-        
+                }
+    // Termina el menu    
+        System.out.println(" Fin del Menu. :D ");
     }
-           
-  
+    
+    
+    
 }
-
-
