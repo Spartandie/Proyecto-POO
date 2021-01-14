@@ -29,7 +29,15 @@ public class Pnode {
         this.next = null;
         this.prev=null;
     }
-
+    
+    public Pnode(String nombre, float precio, int id) {
+        this.next = null;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.id = id;
+        this.prev=null;
+    }
+    
     public Pnode(Pnode next, Pnode prev, String nombre, float precio, int id) {
         this.next = next;
         this.nombre = nombre;
@@ -81,6 +89,9 @@ public class Pnode {
     }
 
     
-    
+    public void remove_node(Pnode n){
+        n.setPrev(null);
+        n.setNext(null);
+    } 
     
 }
