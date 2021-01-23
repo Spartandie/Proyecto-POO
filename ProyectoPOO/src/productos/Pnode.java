@@ -8,7 +8,9 @@ package productos;
 import java.util.logging.Logger;
 
 /**
- *
+ * Objeto denominado Pnode que sirve de nodo que conformara una Estructura e Datos de tipo
+ * Lista Doblemente enlazada Circular, los nodos serviran para guardar la informacion
+ * de nuestros productos.
  * @author spart
  */
 
@@ -148,50 +150,97 @@ public class Pnode {
         this.prev=null;
     }
 
+    /**
+     * funcion de tipo get que regresa next.
+     * @return next regresa la direccion del nodo que le sigue al nodo actual. 
+     */
     public Pnode getNext() {
         return next;
     }
 
+    /**
+     * funcion de tipo get que regresa prev
+     * @return prev regresa la direccion que esta antes de nuestro nodo actual.
+     */
     public Pnode getPrev() {
         return prev;
     }
 
+    /**
+     * funcion de tipo get que regresa nombre.
+     * @return nombre regresa el nombre de nuestro producto guardado en el nodo actual.
+     */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+     * funcion de tipo get que regresa precio.
+     * @return nombre regresa el nombre de nuestro producto guardado en el nodo actual.
+     */
     public float getPrecio() {
         return precio;
     }
 
+    /**
+     * funcion de tipo get que regresa nombre.
+     * @return nombre regresa el nombre de nuestro producto guardado en el nodo actual.
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * funcion de tipo get que regresa tipo.
+     * @return tipo regresa el tipo al que pertenece nuestro producto.
+     */
     public String getTipo() {
         return tipo;
     }
 
+    /**
+     * funcion de tipo get que regresa las existencias.
+     * @return existencias es el numero de unidades de nuestro producto en la tiendita.
+     */
     public int getExistencias() {
         return existencias;
     }
 
+    /**
+     * funcion de tipo get que regresa el autor de nuestro producto.
+     * @return autor es el nombre del autor de nuestro producto.
+     */
     public String getAutor() {
         return autor;
     }
 
+    /**
+     * funcion de tipo get que regresa el genero de nuestro producto.
+     * @return genero es el genero al que pertenece nuestro producto.
+     */
     public String getGenero() {
         return genero;
     }
 
+    /**
+     * funcion de tipo get que regresa el numero de minutos que conforma nuestro producto.
+     * @return minutos refleja el numero de minutos que conforma nuestro producto.
+     */
     public int getMinutos() {
         return minutos;
     }
 
+    /**
+     * funcion de tipo get que regresa el numero de segundos que conforma nuestro producto.
+     * @return segundos refleja el numero de segundos que conforma nuestro producto.
+     */
     public int getSegundos() {
         return segundos;
     }
 
+    /**
+     * 
+     */
     public String getColor() {
         return color;
     }
