@@ -1,0 +1,11 @@
+THS
+1.0
+6
+CD
+5
+CO
+OP
+4
+2
+HOLA
+MUNDO

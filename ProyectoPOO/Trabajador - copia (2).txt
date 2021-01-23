@@ -1,0 +1,3 @@
+Usuario: Trabajador
+Contraseña: Vendedor
+
