@@ -56,8 +56,8 @@ public class Pnode {
      * la informacion que este guardara en su interior.
      * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
      * @param precio es el precio de nuestro producto.
-     * @param it es el id de nuestro producto.
-     * @param tipo especifica el tipo de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
      * @param existencias especifica el numero de unidades actuales de nuestro producto.
      * @param color es el color de nuestro producto.
      */
@@ -73,7 +73,17 @@ public class Pnode {
     }
 
     /**
-     * 
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     * @param existencias especifica el numero de unidades actuales de nuestro producto.
+     * @param autor es el autor de nuestro producto.
+     * @param genero es el genero musical al cual pertenece nuestro producto.
+     * @param minutos es el numero de minutos que dura el producto.
+     * @param pistas es el numero de pistas que contiene nuestro producto.
      */
     public Pnode(String nombre, float precio, int id, String tipo, int existencias, String autor, String genero, int minutos,int nPistas) {
         this.nombre = nombre;
@@ -90,7 +100,18 @@ public class Pnode {
     }
     
     
-    
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     * @param autor es el autor de nuestro producto.
+     * @param genero es el genero musical al cual pertenece nuestro producto.
+     * @param nPistas es el numero de pistas que contiene nuestro producto.
+     * @param canciones es un arreglo que contiene el nombre de nuestras canciones que constituyen nuestro producto.
+     */
     public Pnode(String nombre, float precio, int id, String tipo, String autor, String genero, int nPistas, String[] canciones) {
         this.nombre = nombre;
         this.precio = precio;
@@ -105,7 +126,17 @@ public class Pnode {
         this.canciones=canciones;
     }
     
-
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     * @param existencias especifica el numero de unidades actuales de nuestro producto.
+     * @param autor es el autor de nuestro producto.
+     * @param genero es el genero musical al cual pertenece nuestro producto.
+     */
     public Pnode(String nombre, float precio, int id, String tipo, int existencias, String autor, String genero) {
         this.nombre = nombre;
         this.precio = precio;
@@ -119,6 +150,14 @@ public class Pnode {
         this.canciones=null;
     }
 
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     */
     public Pnode(String nombre, float precio, int id, String tipo) {
         this.nombre = nombre;
         this.precio = precio;
@@ -128,6 +167,15 @@ public class Pnode {
         this.prev=null;
     }
     
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     * @param color de tipo String que especifica el color de nuestro producto.
+     */
     public Pnode(String nombre, float precio, int id, String tipo, String color) {
         this.nombre = nombre;
         this.precio = precio;
@@ -138,7 +186,18 @@ public class Pnode {
         this.prev=null;
     }
     
-
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     * @param autor es el autor de nuestro producto.
+     * @param genero es el genero musical al cual pertenece nuestro producto.
+     * @param minutos es el numero de minutos que dura nuestro producto.
+     * @param segundos es el numero de segundos que dura nuestro producto.
+     */
     public Pnode(String nombre, float precio, int id, String tipo, String autor, String genero, int minutos, int segundos) {
         this.nombre = nombre;
         this.precio = precio;
@@ -153,6 +212,16 @@ public class Pnode {
         
     }
 
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param id es el id de nuestro producto.
+     * @param tipo especifica el tipo de producto que es.
+     * @param autor es el autor de producto.
+     * @param genero es el genero musical al que pertenece nuestro producto.
+     */
     public Pnode(String nombre, float precio, int id, String tipo,  String autor, String genero) {
         this.nombre = nombre;
         this.precio = precio;
