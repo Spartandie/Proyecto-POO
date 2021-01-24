@@ -239,60 +239,123 @@ public class Pnode {
     }
 
     /**
-     * 
+     * funcion de tipo get que regresa el color de nuestro producto.
+     * @return color regresa el color de nuestro producto.
      */
     public String getColor() {
         return color;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertarle una nueva direccion a un nodo existente.
+     * @param next es de tipo Pnode y guardara la direccion de un nuevo nodo que le sigue al 
+     * nodo actual.
+     */
     public void setNext(Pnode next) {
         this.next = next;
     }
 
+    /**
+     * funcion de tipo setter que se encargar de insertarle una nueva direccion a un nodo existente.
+     * @param prev trae la direccion del nodo o del Null que esta antes del nodo actual.
+     */
     public void setPrev(Pnode prev) {
         this.prev = prev;
     }
 
+    /** 
+     * funcion de tipo setter que se encarga de insertarle el nombre a nuestro nodo.
+     * @param nombre es el nombre que le asignaremos a nuestro nodo. 
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el precio del producto a nuestro nodo.
+     * @param precio es el precio que le asignaremos a nuestro nodo.
+     */
     public void setPrecio(float precio) {
         this.precio = precio;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertarle la id del prodcuto a nuestro nodo.
+     * @param id es la id del producto que almacena nuestro nodo.
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el tipo del prodcuto a nuestro nodo.
+     * @param tipo es el tipo al que pertenece nuetsro prodcuto almacenado en nuestro nodo.
+     */
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el numero de unidades del producto
+     * a nuestro nodo.
+     * @param existencias es el numero de existencias de nuestro producto.
+     */
     public void setExistencias(int existencias) {
         this.existencias = existencias;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el nombre del autor del 
+     * producto en nuestro nodo.
+     * @param autor de tipo String nos pasa el nombre del autor del producto almacenado.
+     */
     public void setAutor(String autor) {
         this.autor = autor;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar genero del producto en 
+     * nuestro nodo.
+     * @param genero  es de tipo String y tiene almacenado el genero al que pertenece el producto
+     * en cuestion.
+     */
     public void setGenero(String genero) {
         this.genero = genero;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el numero de minutos al producto
+     * almacenado en nuestro nodo.
+     * @param minutos es el numero de minutos de duracion de nuestro producto.
+     */
     public void setMinutos(int minutos) {
         this.minutos = minutos;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el numero de segundos al producto
+     * almacenado en nuestro nodo.
+     * @param segundos es el numero de segundos de duracion de nuestro producto.
+     */
     public void setSegundos(int segundos) {
         this.segundos = segundos;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el color a nuestro producto
+     * almacenado en nuestro nodo.
+     * @param color es de tipo String encargada de indicar de que color es nuestro producto.
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * funcion de tipo setter que se encarga de insertar el titulo de nuestras canciones.
+     * @param i de tipo entero se encarga de indicar en que columna se encuentra
+     * la cancion a nombrar.
+     * @param nombreCancion de tipo String trae consigo el nombre de nuestra cancion.
+     */
     public void setNombreCanciones(int i, String nombreCancion) {
         
         this.canciones[i] = nombreCancion;
