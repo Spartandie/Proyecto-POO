@@ -30,7 +30,10 @@ public class Pnode {
     private String[] canciones = new String[100];
     private int nPistas;
     
-    
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual ya viene inicializado con
+     * datos predeterminados.
+     */
     public Pnode(){
         this.next=null;
         this.prev=null;
@@ -48,6 +51,16 @@ public class Pnode {
         
     }
 
+    /**
+     * Contructor que sirve para crear un nodo de tipo Pnode el cual se le pasan como parametros
+     * la informacion que este guardara en su interior.
+     * @param nombre es el nombre de nuestro producto almacenado en nuestro nodo.
+     * @param precio es el precio de nuestro producto.
+     * @param it es el id de nuestro producto.
+     * @param tipo especifica el tipo de nuestro producto.
+     * @param existencias especifica el numero de unidades actuales de nuestro producto.
+     * @param color es el color de nuestro producto.
+     */
     public Pnode(String nombre, float precio, int id, String tipo, int existencias, String color) {
         this.nombre = nombre;
         this.precio = precio;
@@ -59,6 +72,9 @@ public class Pnode {
         this.prev=null;
     }
 
+    /**
+     * 
+     */
     public Pnode(String nombre, float precio, int id, String tipo, int existencias, String autor, String genero, int minutos,int nPistas) {
         this.nombre = nombre;
         this.precio = precio;
@@ -80,7 +96,6 @@ public class Pnode {
         this.precio = precio;
         this.id = id;
         this.tipo = tipo;
-       
         this.autor = autor;
         this.genero = genero;
         
@@ -111,7 +126,6 @@ public class Pnode {
         this.tipo = tipo;
         this.next=null;
         this.prev=null;
-   
     }
     
     public Pnode(String nombre, float precio, int id, String tipo, String color) {
@@ -362,46 +376,46 @@ public class Pnode {
         
     }
 
+    /**
+     * funcion de tipo getter que se encarga de encontrar el nombre de una cancion en especifico.
+     * @param i es de tipo entero y nos servira como indice para encontrar la cancion solicitada.
+     * @return this.canciones[ i ] regresa el nombre que se encontro en el arreglo con el indice.
+     */
     public String getNombreCancion(int i) {
         return this.canciones[i];
     }
 
+    /**
+     * funcion de tipo setter encargada de insertar el numero de Pistas musicales a nuestro nodo actual.
+     * @param nPistas es de tipo entero e indica la cantidad de pistas que se pose actualmente.
+     */
     public void setnPistas(int nPistas) {
         this.nPistas = nPistas;
     }
 
+    /**
+     * funcion de tipo getter que se encarga de regresar el numero de Pistas musicales guardadas en nuestro nodo actual.
+     * @return nPistas regresa el numero exacto de Pistas guardadas.
+     */
     public int getnPistas() {
         return nPistas;
     }
 
+    /**
+     * funcion dedicada a regresar un arreglo de tipo String que almacenara las canciones guardadas en este nodo.
+     * @return canciones regresa el nombre de las canciones guardadas en este nodo.
+     */
     public String[] getCanciones() {
         return canciones;
     }
 
-   
-    
-
-    
-   
-
-    
-    
-    
-
     /**
-     * 
+     * funcion dedicada a eleminar un nodo tipo Producto.
      * @param n es un nodo tipo Producto
      */
     public void remove_node(Pnode n){
         n.setPrev(null);
         n.setNext(null);
     } 
-    
-   
-    
-    
-    
-    
-    
     
 }
