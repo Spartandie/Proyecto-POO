@@ -8,7 +8,7 @@ package proyectopoo;
 import Trabajadores.Gerente;
 import Trabajadores.Vendedor;
 import java.util.Scanner;
-import trabajador.Trabajador;
+
 
 /**
  *

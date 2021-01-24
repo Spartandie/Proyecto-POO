@@ -5,7 +5,7 @@
  */
 package proyectopoo;
 import Trabajadores.Acomodador;
-import trabajador.*;
+
 
 
 
@@ -54,15 +54,16 @@ public class ProyectoPOO {
      if(respuesta.equals("1")){
      
         
-        //Se verifica en los archivtos txt si los datos pertencen a un usuario o a un trabajador,
-        //ambos anteriormente registrados
-        //*********
+
         
         System.out.println("Identifiquese por favor, ingrese usuario");
         String usuario1=in.nextLine();
         Directorio nuevo= new Directorio();
         nuevo.directorio("Usuarios");
         File archivos=new File("Usuarios/"+usuario1+".txt");
+        if(archivos.exists()){
+            
+        
             if(usuario1.equals("Trabajador") || usuario1.equals("TRABAJADOR")){
                   Ingreso uno=new Ingreso();
                   String trabajador=uno.LoginT(usuario1);//llama al método para casos de ingreso como trabajador
@@ -302,7 +303,7 @@ public class ProyectoPOO {
                  return;
              }
          if (d=="Cierto"){//Caso registro exitoso
-            if(u.LoginU()==1){
+            if(u.LoginU(l, c)==1){
                 
             do{
            if(d==null){
@@ -311,7 +312,7 @@ public class ProyectoPOO {
            d=u.RegistroU();
              }while(d!="Cierto");
            
-           if(u.LoginU()==1){
+           if(u.LoginU(l, c)==1){
                System.out.println("Demasiados intentos fallidos de sesion, el programa se cerrará ahora");
                return;
            }
@@ -331,7 +332,7 @@ public class ProyectoPOO {
            d=u.RegistroU();
              }while(d!="Cierto");
            
-       u.LoginU();
+       u.LoginU(l, c);
              }
           
 
@@ -349,7 +350,7 @@ public class ProyectoPOO {
                  return;
              }
          if (d=="Cierto"){//Caso registro exitoso
-            if(u.LoginU()==1){
+            if(u.LoginU(l, c)==1){
                 
             do{
            if(d==null){
@@ -358,7 +359,7 @@ public class ProyectoPOO {
            d=u.RegistroU();
              }while(d!="Cierto");
            
-           if(u.LoginU()==1){
+           if(u.LoginU(l, c)==1){
                System.out.println("Demasiados intentos fallidos de sesion, el programa se cerrará ahora");
                return;
            }
@@ -378,7 +379,7 @@ public class ProyectoPOO {
            d=u.RegistroU();
              }while(d!="Cierto");
            
-       u.LoginU();//Caso registro exitoso
+       u.LoginU(l ,c);//Caso registro exitoso
              }
 
      //Caso Usuario sale de la tienda
@@ -392,7 +393,7 @@ public class ProyectoPOO {
      }
     }
 }
-
+}
 
      
      

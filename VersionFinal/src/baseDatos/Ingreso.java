@@ -5,6 +5,8 @@
  */
 package baseDatos;
 
+import Trabajadores.Gerente;
+import Trabajadores.Vendedor;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -121,7 +123,7 @@ public String RegistroU() throws IOException{
 
 
 
-public int LoginU() throws IOException{
+public int LoginU(Gerente l, Vendedor c) throws IOException{
     
         Scanner in = new Scanner(System.in);
         System.out.println("Identifiquese por favor, ingrese usuario");
@@ -142,7 +144,7 @@ public int LoginU() throws IOException{
                  String contrasetry2= br.readLine();
                  if(contraseña.equals(contrasetry2)){
                      Menue menu=new Menue();
-                     menu.menuUsuario();
+                     menu.menuUsuario(l, c);
                  return 0;}
                  else{ 
                          System.out.println("La contraseña es incorrecta, el programa se cerrará ahora por seguridad de nuestros clientes");
